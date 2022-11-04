@@ -1,0 +1,9 @@
+.l-footer {
+    text-align: center;
+    font-size: 10px;
+    padding: 10px 0;
+    @include mq_up(md) {
+        font-size: 12px;
+        padding: 15px 0;
+    }
+}

@@ -1,0 +1,35 @@
+.c-button--link {
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+    a, button {
+        position: relative;
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 63px;
+        line-height: 63px;
+        border-radius: 63px;;
+        font-size: 1.05em;
+        font-weight: 700;
+        &.contact {
+            color: #fff;
+            background: $colorPink;
+        }
+        &.line {
+            color: #fff;
+            background: #06C765;
+        }
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: center/contain no-repeat url(./../img/icon-arrow-right-circle-white.png)
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+$breakpoint-up: (
+    'sm': 'screen and (min-width: 600px)',
+    'md': 'screen and (min-width: 1020px)',
+) !default;
+
+$breakpoint-down: (
+    'sm': 'screen and (max-width: 599px)',
+    'md': 'screen and (max-width: 1019px)',
+) !default;
+
+@mixin mq_up($breakpoint: md) {
+    @media #{map-get($breakpoint-up, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin mq_down($breakpoint: md) {
+    @media #{map-get($breakpoint-down, $breakpoint)} {
+        @content;
+    }
+}
+
+
+/* ----------------------------------------------------------
+    color
+---------------------------------------------------------- */
+/* color - basic */
+$colorBlack: #444444;
+$colorBlue: #9AD0D5;
+$colorPink: #DE787D;
+
+/* color - parts */
+$colorLink: #1a0dab;
+
+/* backgroundColor */
+$bgColorYellow: #FFFEF7;
+$bgColorBlue: #F5FBFC;
+
+
+
+
+/* ----------------------------------------------------------
+    foundation
+---------------------------------------------------------- */
+
+/* base */
+@import "./foundation/base";
+@import "./foundation/reset";
+
+
+/* ----------------------------------------------------------
+    layout
+---------------------------------------------------------- */
+@import "./layout/l-footer";
+@import "./layout/l-lp";
+
+/* ----------------------------------------------------------
+    object
+---------------------------------------------------------- */
+/* component */
+@import "./object/component/c-button";
+@import "./object/component/c-flex";
+@import "./object/component/c-headline";
+@import "./object/component/c-img";
+@import "./object/component/c-table";
+@import "./object/component/c-text";
+
+/* project */
+
+/* utility */
+@import "./object/utility/u-align";
+@import "./object/utility/u-color";
+@import "./object/utility/u-font";
+@import "./object/utility/u-margin";
+@import "./object/utility/u-padding";

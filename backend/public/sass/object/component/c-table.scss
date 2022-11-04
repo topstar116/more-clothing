@@ -1,0 +1,23 @@
+table.c-table--price {
+    width: 100%;
+    text-align: right;
+    .border {
+        border-bottom: 1px solid #F0F0F0;
+        th, td {
+            padding-bottom: 5px;
+        }
+    }
+    th, td {
+        padding: 5px 0 0;
+    }
+    th {
+        text-align: right;
+        font-weight: 400;
+        color: #ACACAC;
+    }
+    td {
+        width: 100px;
+        color: #727272;
+        font-weight: 700;
+    }
+}

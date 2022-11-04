@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+$breakpoint-up: (
+    'sm': 'screen and (min-width: 400px)',
+    'md': 'screen and (min-width: 896px)',
+    'lg': 'screen and (min-width: 1020px)',
+) !default;
+
+$breakpoint-down: (
+    'sm': 'screen and (max-width: 399px)',
+    'md': 'screen and (max-width: 897px)',
+    'lg': 'screen and (max-width: 1020px)',
+) !default;
+
+@mixin mq_up($breakpoint: md) {
+    @media #{map-get($breakpoint-up, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin mq_down($breakpoint: md) {
+    @media #{map-get($breakpoint-down, $breakpoint)} {
+        @content;
+    }
+}
+
+
+/*
+    共通
+*/
+.other__screen {
+    padding: 8rem 0 2.5rem;
+    text-align: center;
+    border-bottom: 1px solid #EBEBEB;
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0;
+        &:after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            margin: auto;
+            background: #E06D6B;
+            margin-top: 10px;
+        }
+    }
+}
+.other__content {
+    padding: 3rem 0;
+}
+
+/*
+    ログイン
+    /sign-in/
+*/
+.other__content.page__login {
+    .l-wrap {
+        @include mq_up(md) {
+            width: 400px;
+            margin: auto;
+        }
+    }
+}
+.other__content.page__other {
+    .l-wrap {
+        @include mq_up(md) {
+            width: 600px;
+            margin: auto;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+}
+.other__content__login {
+    margin-bottom: 1.5rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .other__content__login__inner {
+        label {
+            font-weight: 700;
+        }
+        input {
+            background: #F4F4F4;
+            padding: 15px 10px;
+            height: auto;
+            width: 100%;
+            border-radius: 3px;
+        }
+        button {
+            background: #70CCB9;
+            color: #fff;
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 3px;
+        }
+    }
+}

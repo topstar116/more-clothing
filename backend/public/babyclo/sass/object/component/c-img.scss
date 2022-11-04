@@ -1,0 +1,28 @@
+.c-img--cover {
+    position: relative;
+    img {
+        position: absolute;
+        object-fit: cover;
+        font-family: 'object-fit: cover;';
+        height: 100%;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+}
+.c-img--contain {
+    position: relative;
+    img {
+        position: absolute;
+        object-fit: contain;
+        font-family: 'object-fit: contain;';
+        height: 100%;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+}

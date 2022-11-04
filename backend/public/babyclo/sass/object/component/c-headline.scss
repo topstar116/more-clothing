@@ -1,0 +1,17 @@
+.c-headline--lp {
+    margin-bottom: 28px;
+    text-align: center;
+    &:after {
+        content: "";
+        display: block;
+        width: 38px;
+        height: 3px;
+        background: #FF7272;
+        border-radius: 10px;
+        margin: 7px auto 0;
+    }
+    h2 {
+        font-size: 22px;
+        font-weight: 700;
+    }
+}

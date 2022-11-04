@@ -1,0 +1,23 @@
+#footer {
+    padding: 3rem 0;
+    background: #212121;
+    color: #fff;
+    .footer__box {
+        margin-bottom: 2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        ul {
+            margin-top: .5rem;
+            li {
+                margin-right: 1rem;
+                a {
+                    color: #B7B7B7;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+    .footer__box__headline {
+    }
+}

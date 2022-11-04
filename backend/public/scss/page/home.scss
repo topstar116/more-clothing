@@ -1,0 +1,107 @@
+/*
+    共通
+*/
+.home__content {
+    padding: 5rem 0;
+}
+.home__headline {
+    text-align: center;
+    margin-bottom: 2rem;
+    span {
+        display: inline-block;
+        color: #E06D6B;
+    }
+    h2 {
+        margin-top: .5rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
+.home__summary {
+    p {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+}
+
+/*
+    Screen
+*/
+.home__screen {
+    height: 500px;
+    width: 100%;
+    background: no-repeat url('/img/home-screen.jpg') top / cover;
+    .home__screen__text {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        padding: 30px;
+        border-radius: 3px;
+        background: #fff;;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+    }
+}
+
+/*
+    Link
+*/
+.home__link {
+    padding: 2rem 0;
+}
+
+/*
+    Price
+*/
+.price__table {
+    max-width: 600px;
+    margin: auto;
+}
+
+/*
+    Service
+*/
+
+.home__service__box {
+    @include mq_up(md) {
+        max-width: 350px;
+    }
+    margin-bottom: 1rem;
+    &.one h3:before { content: "1"; }
+    &.two h3:before { content: "2"; }
+    &.three h3:before { content: "3"; }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.home__service__box__headline {
+    h3 {
+        position: relative;
+        line-height: 40px;
+        padding-left: 45px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        &:before {
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            text-align: center;
+            background: #E06D6B;
+            color: #fff;
+        }
+    }
+}
+
+.home__service__box__img {
+    width: 80%;
+    margin: auto auto 1em auto;
+}
+.home__service__box__text {
+    width: 80%;
+    margin: auto;
+}

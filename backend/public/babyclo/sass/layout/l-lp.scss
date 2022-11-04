@@ -1,0 +1,236 @@
+/*--------------------------------------------------------------------
+    共通
+--------------------------------------------------------------------*/
+.lp-content {
+    padding: 48px 0;
+    @include mq_up(md) {
+        padding: 60px 0;
+    }
+    .lp-content--inner {
+        padding: 0 15px;
+        @include mq_up(md) {
+            padding: 0 30px;
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------------
+    header
+--------------------------------------------------------------------*/
+.lp-logo {
+    text-align: center;
+    padding: 10px 0;
+    img {
+        width: 120px;
+    }
+}
+
+/*--------------------------------------------------------------------
+    main
+--------------------------------------------------------------------*/
+
+/*
+    main - スクリーン
+*/
+.lp-screen {
+    position: relative;
+    .lp-screen--text {
+        z-index: 1;
+        display: inline-block;
+        position: absolute;
+        left: 5%;
+        top: 10%;
+        text-align: center;
+        p {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 200px;
+        }
+    }
+    .lp-screen--image {
+        &:before {
+            content: "";
+            padding-top: 90%;
+            display: block;
+        }
+    }
+}
+
+
+/*
+    main - ビジョン
+*/
+
+.lp-vision--headline {
+    margin-bottom: 28px;
+    h2 {
+        color: $colorBlue;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+.lp-vision--wrap {
+    padding: 0 20px;
+    text-align: center;
+    p {
+        text-align: center;
+    }
+}
+
+/*
+    main - フロー
+*/
+.lp-flow {
+    background: $bgColorBlue;
+}
+.lp-flow--content {
+    position: relative;
+    margin-bottom: 10px;
+    background :#fff;
+    padding: 15px;
+    @include mq_up(md) {
+        margin-bottom: 20px;
+        padding: 40px;
+    }
+    .decoration {
+        display: inline-block;
+        position: absolute;
+        color: #fff;
+        background: $colorPink;
+        border-radius: 1px;
+        font-weight: 700;
+        padding: 0px 15px;
+        right: -7px;
+        top: 0;
+        transform: rotate(10deg);
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .lp-flow--content--headline {
+        margin-bottom: 15px;
+        @include mq_up(md) {
+            margin-bottom: 30px;
+        }
+        span {
+            font-size: 24px;
+            font-weight: 700;
+            position: relative;
+            display: block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            color: $colorPink;
+            border-right: 2px dashed $colorPink;
+        }
+        h3 {
+            flex: 1;
+            padding-left: 10px;
+            font-size: 17px;
+            font-weight: 700;
+            @include mq_up(md) {
+                font-size: 20px;
+            }
+        }
+    }
+    .lp-flow--content--text {
+    }
+    .lp-flow--content--standout {
+        text-align: center;
+        font-weight: 700;
+        margin-top: 10px;
+        @include mq_up(md) {
+            margin-top: 30px;
+        }
+    }
+}
+
+
+/*
+    main - お願い
+*/
+.lp-note {
+    .lp-note--text {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .lp-note--table {
+        background: $bgColorYellow;
+        padding: 15px;
+        @include mq_up(md) {
+            padding: 40px
+        }
+        table {
+            width: 100%;
+            th, td {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            thead {
+                th {
+                    color: $colorBlue;
+                    font-weight: 700;
+                    &:nth-child(1),
+                    &:nth-child(3) {
+                        width: 40%;
+                    }
+                    &:nth-child(2) {
+                        width: 10%;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    background: #fff;
+                }
+                td {
+                    padding: 10px;
+                    background: #fff;
+                    font-weight: 700;
+                    .note-number {
+                        font-size: 40px;
+                    }
+                    img {
+                        padding-top: 30px;
+                        width: 24px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*
+    main - 寄付
+*/
+.lp-donate {
+    background: $bgColorBlue;
+}
+.lp-donate--wrap {
+    .lp-donate--inner {
+        background: #fff;
+        padding: 30px 15px;
+        p {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+
+
+/*
+    main - コンバージョン
+*/
+
+.lp-conversion {
+    padding: 20px;
+}
+
+

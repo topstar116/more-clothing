@@ -1,0 +1,26 @@
+.l-alart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    animation-name: alartFadeOut;
+    animation-duration: .5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    @include mq_up(md) {
+        font-size: 18px;
+        padding: 30px 0;
+    }
+    &.errorAlart {
+        background: rgba(237, 70, 70, .8);
+        color: #fff;
+    }
+    &.successAlart {
+        background: rgba(62, 137, 224, .8);
+    }
+    p {
+        text-align: center;
+    }
+}
+

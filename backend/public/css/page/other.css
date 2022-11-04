@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/*
+    共通
+*/
+.other__screen {
+  padding: 8rem 0 2.5rem;
+  text-align: center;
+  border-bottom: 1px solid #EBEBEB;
+}
+.other__screen h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.other__screen h1:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin: auto;
+  background: #E06D6B;
+  margin-top: 10px;
+}
+
+.other__content {
+  padding: 3rem 0;
+}
+
+/*
+    ログイン
+    /sign-in/
+*/
+@media screen and (min-width: 896px) {
+  .other__content.page__login .l-wrap {
+    width: 400px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 896px) {
+  .other__content.page__other .l-wrap {
+    width: 600px;
+    margin: auto;
+  }
+}
+.other__content.page__other .l-wrap h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.other__content__login {
+  margin-bottom: 1.5rem;
+}
+.other__content__login:last-child {
+  margin-bottom: 0;
+}
+.other__content__login .other__content__login__inner label {
+  font-weight: 700;
+}
+.other__content__login .other__content__login__inner input {
+  background: #F4F4F4;
+  padding: 15px 10px;
+  height: auto;
+  width: 100%;
+  border-radius: 3px;
+}
+.other__content__login .other__content__login__inner button {
+  background: #70CCB9;
+  color: #fff;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 3px;
+}
+
+/*# sourceMappingURL=other.css.map */

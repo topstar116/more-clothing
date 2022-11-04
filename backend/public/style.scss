@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+$breakpoint-up: (
+    'sm': 'screen and (min-width: 400px)',
+    'md': 'screen and (min-width: 896px)',
+    'lg': 'screen and (min-width: 1020px)',
+) !default;
+
+$breakpoint-down: (
+    'sm': 'screen and (max-width: 399px)',
+    'md': 'screen and (max-width: 897px)',
+    'lg': 'screen and (max-width: 1020px)',
+) !default;
+
+@mixin mq_up($breakpoint: md) {
+    @media #{map-get($breakpoint-up, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin mq_down($breakpoint: md) {
+    @media #{map-get($breakpoint-down, $breakpoint)} {
+        @content;
+    }
+}
+
+
+
+/* ----------------------------------------------------------
+    color
+---------------------------------------------------------- */
+/* color */
+$colorPink: #ED6C73;
+$colorBlue: #373B50;
+$colorGray: #797979;
+$colorBlackWhite: #1D1D1D;
+
+/* bgColor */
+$bgMainColor: #F6F5F7;
+$colorTextLink: #3399ff;
+$colorBorderColor: #707070;
+
+
+
+/* ----------------------------------------------------------
+    foundation
+---------------------------------------------------------- */
+/* base */
+@import "./sass/foundation/single/home";
+
+/* base */
+@import "./sass/foundation/base/base";
+@import "./sass/foundation/base/reset";
+
+/* common */
+@import "./sass/foundation/common/breadcrumbs";
+@import "./sass/foundation/common/category";
+@import "./sass/foundation/common/footer";
+@import "./sass/foundation/common/header";
+@import "./sass/foundation/common/lead";
+@import "./sass/foundation/common/nav";
+@import "./sass/foundation/common/page";
+@import "./sass/foundation/common/sidebar";
+
+
+
+/* ----------------------------------------------------------
+    layout
+---------------------------------------------------------- */
+@import "./sass/layout/l-alart";
+@import "./sass/layout/l-button";
+@import "./sass/layout/l-content";
+@import "./sass/layout/l-flexbox";
+@import "./sass/layout/l-list";
+@import "./sass/layout/l-main";
+@import "./sass/layout/l-modal";
+@import "./sass/layout/l-scroll";
+@import "./sass/layout/l-top";
+@import "./sass/layout/l-wrap";
+
+
+
+/* ----------------------------------------------------------
+    object
+---------------------------------------------------------- */
+/* component */
+@import "./sass/object/component/c-button";
+@import "./sass/object/component/c-headline";
+@import "./sass/object/component/c-img";
+@import "./sass/object/component/c-input";
+@import "./sass/object/component/c-link";
+@import "./sass/object/component/c-list";
+@import "./sass/object/component/c-scroll";
+@import "./sass/object/component/c-table";
+@import "./sass/object/component/c-text";
+
+/* project */
+
+/* utility */
+@import "./sass/object/utility/u-color";
+@import "./sass/object/utility/u-font";
+@import "./sass/object/utility/u-hidden";
+@import "./sass/object/utility/u-margin";
+@import "./sass/object/utility/u-padding";
+@import "./sass/object/utility/u-text";
+@import "./sass/object/utility/u-width";
